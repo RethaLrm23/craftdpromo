@@ -50,7 +50,7 @@
             position: relative;
             z-index: 10;
             padding: 20px; /* Space for the border */
-            border: 2px solid #d4af37;
+            border: 6px solid #d4af37;
             height: 73vh;
             display: flex;
             flex-direction: column;
@@ -82,13 +82,14 @@
         /* --- PACKAGE LAYERS --- */
         .layer {
             position: relative; /* For positioning the title */
-            padding: 25px 20px 20px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-radius: 20px;
             margin-top: 25px; /* Space for the title to sit on top */
             /* min-height: 180px; */
+            flex: 1;
         }
 
         .gold-layer {
@@ -152,7 +153,7 @@
         @media (max-width: 600px) {
             
             .layer {
-                padding: 15px 8px 8px;
+                padding: 10px;
                 margin-top: 15px;
             }
             .icons-row { margin-bottom: 0; }
