@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAFTD. | Premium Barbering</title>
+    <style>
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Black', Gadget, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #000;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* --- BACKGROUND CHAIR (BLURRED) --- */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg-image {
+            height: 90%;
+            width: auto;
+            opacity: 0.25;
+            filter: blur(8px);
+        }
+
+        /* --- MAIN WRAPPER --- */
+        .flyer-main {
+            width: 100%;
+            max-width: 700px;
+            position: relative;
+            z-index: 10;
+            padding: 20px; /* Space for the border */
+            border: 2px solid #d4af37;
+        }
+
+        /* --- HEADER (BLACK) --- */
+        .header-section {
+            background: #fff;
+            padding: 0 20px 0;
+            text-align: center;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 0;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        .tagline span { color: #d4af37; }
+
+        /* --- PACKAGE LAYERS --- */
+        .layer {
+            position: relative; /* For positioning the title */
+            padding: 50px 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+            margin-top: 35px; /* Space for the title to sit on top */
+            min-height: 180px;
+        }
+
+        .gold-layer {
+            background: linear-gradient(to right, #d4af37, #f2d992, #d4af37);
+            color: #000;
+        }
+
+        .black-layer {
+            background: #000;
+            color: #d4af37;
+        }
+
+        /* --- CONTENT STYLING --- */
+        .details h2 {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            text-transform: none;
+            white-space: nowrap; /* Prevents title from wrapping */
+            border: 2px solid #fff; /* Separation from the box */
+        }
+
+        .gold-layer .details h2 {
+            background: #000;
+            color: #d4af37;
+        }
+
+        .black-layer .details h2 {
+            background: #d4af37;
+            color: #000;
+        }
+
+        .icons-row {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .icon-box {
+            text-align: left;
+            width: auto;
+        }
+
+        .icon-box p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: inherit;
+        }
+
+        .price {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: inherit;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            .layer {
+                padding-top: 40px;
+                margin-top: 30px;
+            }
+            .icons-row { margin-bottom: 0; }
+            .price {
+                font-size: 2.2rem;
+            }
+            .tagline { font-size: 0.8rem; letter-spacing: 3px; }
+            .details h2 {
+                font-size: 1.2rem;
+                padding: 6px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container">
+        <img src="your-gold-chair-image.png" alt="Background" class="bg-image">
+    </div>
+
+    <main class="flyer-main">
+        
+        <header class="header-section">
+            <img src="bg1.png" alt="CRAFTD." class="logo-image">
+        </header>
+
+        <section class="layer gold-layer">
+            <div class="details">
+                <h2>Fresh Look</h2>
+                <div class="icons-row">
+                    <div class="icon-box"><p>Facemask</p></div>
+                    <div class="icon-box"><p>Wax ear/nose</p></div>
+                    <div class="icon-box"><p>Haircut</p></div>
+                </div>
+            </div>
+            <div class="price">R319</div>
+        </section>
+
+        <section class="layer black-layer">
+            <div class="details">
+                <h2>The Polished Man</h2>
+                <div class="icons-row">
+                    <div class="icon-box"><p>Haircut</p></div>
+                    <div class="icon-box"><p>Beard lineup</p></div>
+                    <div class="icon-box"><p>Facemask</p></div>
+                </div>
+            </div>
+            <div class="price">R364</div>
+        </section>
+
+        <section class="layer gold-layer">
+            <div class="details">
+                <h2>The Full Reset</h2>
+                <div class="icons-row">
+                    <div class="icon-box"><p>Haircut</p></div>
+                    <div class="icon-box"><p>Full Shave</p></div>
+                    <div class="icon-box"><p>Facemask</p></div>
+                    <div class="icon-box"><p>Wax ear/nose</p></div>
+                </div>
+            </div>
+            <div class="price">R427</div>
+        </section>
+
+    </main>
+
+</body>
+</html>
